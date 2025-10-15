@@ -1,0 +1,140 @@
+.particle-detail-page {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.loading-container p {
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.error-alert {
+  margin: 40px 0;
+  border-radius: 10px;
+}
+
+.particle-detail-container {
+  width: 85%;
+  margin: 5px auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.particle-detail-container h1 {
+  margin: 0 0 0 0;
+  color: #000;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.particle-card {
+  border: 1px solid #D2D2D2;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.particle-detail-page .particle-image-wrapper {
+  flex: 0 0 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+
+.particle-detail-page .particle-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 0;
+  display: block;
+}
+
+.particle-detail-page .particle-info-wrapper {
+  padding: 30px;
+  margin-left: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.particle-detail-page .particle-detail-mass,
+.particle-detail-page .particle-detail-description {
+  margin: 0 0 10px 0;
+  color: #000;
+  font-size: 16px;
+  line-height: 1.6;
+  display: block;
+}
+
+.particle-detail-page .particle-detail-description {
+  margin-bottom: 0;
+}
+
+.footer {
+  background-color: #D2D2D2;
+  text-align: center;
+  padding: 30px;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .particle-detail-container {
+    width: 90%;
+  }
+  
+  .particle-detail-container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .particle-detail-page .particle-card {
+    flex-direction: column;
+  }
+  
+  .particle-detail-page .particle-image-wrapper {
+    flex: none;
+    height: 250px;
+  }
+  
+  .particle-info-wrapper {
+    margin-left: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .particle-detail-mass,
+  .particle-detail-description {
+    font-size: 14px;
+  }
+}

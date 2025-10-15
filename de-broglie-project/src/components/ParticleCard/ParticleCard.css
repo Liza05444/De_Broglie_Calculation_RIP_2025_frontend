@@ -1,0 +1,78 @@
+.particle-card {
+  width: 210px;
+  border: 1px solid #D2D2D2;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.particle-card:hover {
+  box-shadow: 0 0 6px 2px #d2d2d2;
+}
+
+.particle-card .particle-image-wrapper {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  flex: none;
+}
+
+.particle-card .particle-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  flex: none;
+}
+
+.particle-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.particle-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.particle-mass {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.particle-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: transparent;
+  border-top: 1px solid #D2D2D2;
+}
+
+.action-button {
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+.particle-card:hover .particle-title,
+.particle-card:hover .particle-mass {
+  color: #e01e5a;
+}
