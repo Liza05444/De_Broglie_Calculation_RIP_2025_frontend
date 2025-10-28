@@ -67,20 +67,66 @@
   margin-bottom: 30px;
 }
 
-.welcome-features h5 {
+.carousel-content {
+  padding: 20px 60px;
+  text-align: center;
+}
+
+.carousel-content h5 {
   color: #000;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.welcome-features ul {
+.carousel-content ul {
   margin: 0;
   padding-left: 20px;
+  text-align: left;
 }
 
-.welcome-features li {
+.carousel-content li {
   margin-bottom: 8px;
   color: #000;
+}
+
+.carousel-content ol {
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.carousel-content p {
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+  opacity: 0.8;
+}
+
+.carousel-control-prev {
+  left: -15px;
+}
+
+.carousel-control-next {
+  right: -15px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #e01e5a;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-size: 20px 20px;
 }
 
 .welcome-actions {

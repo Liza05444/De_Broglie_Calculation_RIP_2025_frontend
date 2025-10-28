@@ -1,5 +1,5 @@
 import { type FC, useState, useEffect } from 'react';
-import { Container, Row, Col, Spinner, Alert } from 'react-bootstrap';
+import { Container, Spinner, Alert } from 'react-bootstrap';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import type { Particle, FilterParams, DeBroglieCartInfo } from '../../types';
 import { getParticles } from '../../modules/particles';
@@ -112,16 +112,16 @@ export const ParticlesPage: FC = () => {
         )}
 
         {!loading && !error && particles.length > 0 && (
-          <Row className="particles-grid">
+          <div className="particles-grid">
             {particles.map((particle) => (
-              <Col key={particle.id} xs={12} sm={6} md={4} lg={3} xl={3}>
+              <div key={particle.id} className="particle-col">
                 <ParticleCard
                   particle={particle}
                   onViewDetails={handleViewDetails}
                 />
-              </Col>
+              </div>
             ))}
-          </Row>
+          </div>
         )}
       </Container>
 

@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
+import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import './HomePage.css';
 
@@ -24,19 +24,30 @@ export const HomePage: FC = () => {
                   Добро пожаловать!
                 </Card.Title>
                 <div className="welcome-features">
-                  <Accordion defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                      <Accordion.Header>Возможности</Accordion.Header>
-                      <Accordion.Body>
+                  <Carousel interval={8000} indicators={false} controls={true}>
+                    <Carousel.Item>
+                      <div className="carousel-content">
+                        <h5>Возможности</h5>
                         <ul>
-                          <li>Просмотр каталога элементарных частиц</li>
+                          <li>Просмотр каталога частиц</li>
                           <li>Фильтрация частиц по названию</li>
                           <li>Детальная информация о каждой частице</li>
                           <li>Создание заявок на расчет длины волны де Бройля</li>
                         </ul>
-                      </Accordion.Body>
-                    </Accordion.Item>
-                  </Accordion>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <div className="carousel-content">
+                        <h5>Как использовать</h5>
+                        <ol>
+                          <li>Перейдите в раздел "Частицы"</li>
+                          <li>Выберите интересующие Вас частицы</li>
+                          <li>Изучите детальную информацию о них</li>
+                          <li>Создайте заявку на расчет длины волны де Бройля для частиц</li>
+                        </ol>
+                      </div>
+                    </Carousel.Item>
+                  </Carousel>
                 </div>
               </Card.Body>
             </Card>

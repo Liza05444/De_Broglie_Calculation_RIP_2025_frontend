@@ -1,9 +1,10 @@
 .particle-card {
-  width: 210px;
+  width: 100%;
+  max-width: 240px;
   border: 1px solid #D2D2D2;
   border-radius: 10px;
   transition: box-shadow 0.3s ease;
-  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
 .particle-card:hover {

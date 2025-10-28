@@ -37,8 +37,20 @@ h1 {
 }
 
 .particles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   justify-content: center;
+  gap: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.particle-col {
+  display: flex;
+  justify-content: center;
 }
 
 .loading-container {
