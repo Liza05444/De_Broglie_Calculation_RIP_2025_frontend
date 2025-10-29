@@ -1,7 +1,7 @@
 import { type FC } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import type { Particle } from '../../types';
-import defaultImage from '/src/assets/default_particle.png';
+import defaultImage from '../../assets/default_particle.png';
 import './ParticleCard.css';
 
 interface ParticleCardProps {

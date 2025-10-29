@@ -2,6 +2,8 @@ import { type FC } from 'react';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { ROUTES, ROUTE_LABELS } from '../../constants/routes';
+import phetLogo from '../../assets/phet_logo.png';
+import uniLogo from '../../assets/uni_logo.png';
 import './Navbar.css';
 
 export const Navbar: FC = () => {
@@ -12,9 +14,9 @@ export const Navbar: FC = () => {
       <Container>
         <BootstrapNavbar.Brand as={Link} to={ROUTES.HOME} className="navbar-brand">
           <div className="logo-container">
-            <img src="/src/assets/phet_logo.png" alt="PhET Logo" className="logo-image" />
+            <img src={phetLogo} alt="PhET Logo" className="logo-image" />
             <div className="logo-divider"></div>
-            <img src="/src/assets/uni_logo.png" alt="University Logo" className="logo-image" />
+            <img src={uniLogo} alt="University Logo" className="logo-image" />
           </div>
         </BootstrapNavbar.Brand>
         

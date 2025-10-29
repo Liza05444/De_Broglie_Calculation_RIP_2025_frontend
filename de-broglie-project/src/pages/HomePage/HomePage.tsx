@@ -1,6 +1,7 @@
 import { type FC } from 'react';
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
+import bannerImage from '../../assets/banner.png';
 import './HomePage.css';
 
 export const HomePage: FC = () => {
@@ -10,7 +11,7 @@ export const HomePage: FC = () => {
       
       <div className="banner-container">
         <div className="banner">
-          <img src="/src/assets/banner.png" alt="Banner" className="banner-image" />
+          <img src={bannerImage} alt="Banner" className="banner-image" />
         </div>
         <h1 className="banner-title">Расчет длины волны де Бройля</h1>
       </div>

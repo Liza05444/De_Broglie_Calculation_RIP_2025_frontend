@@ -105,6 +105,9 @@
 .carousel-control-next {
   width: 8%;
   opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-control-prev {
@@ -127,6 +130,8 @@
   width: 35px;
   height: 35px;
   background-size: 20px 20px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .welcome-actions {
@@ -178,5 +183,31 @@
   
   .welcome-card {
     padding: 20px;
+  }
+  
+  .carousel-content {
+    padding: 20px 50px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 45px;
+    flex-shrink: 0;
+  }
+  
+  .carousel-control-prev {
+    left: 0;
+  }
+  
+  .carousel-control-next {
+    right: 0;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+    background-size: 20px 20px;
+    flex-shrink: 0;
   }
 }

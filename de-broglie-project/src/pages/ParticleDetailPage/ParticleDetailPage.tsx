@@ -1,18 +1,22 @@
 import { type FC, useState, useEffect } from 'react';
 import { Container, Spinner, Alert } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { useSearchQuery } from '../../store/slices/particlesSlice';
 import type { Particle } from '../../types';
 import { getParticle } from '../../modules/particles';
 import { ROUTES, ROUTE_LABELS } from '../../constants/routes';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
-import defaultImage from '/src/assets/default_particle.png';
+import defaultImage from '../../assets/default_particle.png';
 import './ParticleDetailPage.css';
 
 export const ParticleDetailPage: FC = () => {
   const { id } = useParams<{ id: string }>();
+  const searchQuery = useSearchQuery();
   const [particle, setParticle] = useState<Particle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const backUrl = searchQuery ? `${ROUTES.PARTICLES}?particle=${encodeURIComponent(searchQuery)}` : ROUTES.PARTICLES;
 
   useEffect(() => {
     const loadParticle = async () => {
@@ -70,7 +74,7 @@ export const ParticleDetailPage: FC = () => {
     <div className="particle-detail-page">
       <BreadCrumbs 
         crumbs={[
-          { label: ROUTE_LABELS.PARTICLES, path: ROUTES.PARTICLES },
+          { label: ROUTE_LABELS.PARTICLES, path: backUrl },
           { label: particle.name }
         ]} 
       />
