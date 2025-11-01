@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Certificates
+de-broglie-project/ca.crt
+de-broglie-project/ca.key
+de-broglie-project/cert.crt
+de-broglie-project/cert.key
+
+de-broglie-project/dev-dist
