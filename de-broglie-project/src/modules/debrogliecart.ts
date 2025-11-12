@@ -1,12 +1,10 @@
 import type { DeBroglieCartInfo } from '../types';
+import { dest_api } from '../target_config';
 
 export const getDeBroglieCartInfo = async (): Promise<DeBroglieCartInfo> => {
   try {
-    const response = await fetch(`/api/requestdebrogliecalculations/debrogliecart`, {
+    const response = await fetch(`${dest_api}/requestdebrogliecalculations/debrogliecart`, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
     });
     
     if (!response.ok) {

@@ -1,5 +1,6 @@
 import type { Particle, FilterParams } from '../types';
 import { PARTICLES_MOCK } from '../data/mock';
+import { dest_api } from '../target_config';
 
 export const getParticles = async (filters?: FilterParams): Promise<Particle[]> => {
   try {
@@ -10,7 +11,7 @@ export const getParticles = async (filters?: FilterParams): Promise<Particle[]> 
     }
     
     const queryString = params.toString();
-    const url = `/api/particles${queryString ? `?${queryString}` : ''}`;
+    const url = `${dest_api}/particles${queryString ? `?${queryString}` : ''}`;
     
     const response = await fetch(url);
     
@@ -19,7 +20,13 @@ export const getParticles = async (filters?: FilterParams): Promise<Particle[]> 
     }
     
     const data = await response.json();
-    return data;
+    
+    const fixedData = data.map((particle: Particle) => ({
+      ...particle,
+      image: particle.image
+    }));
+    
+    return fixedData;
   } catch (error) {
     console.warn('API request failed, using mock data:', error);
     
@@ -37,14 +44,20 @@ export const getParticles = async (filters?: FilterParams): Promise<Particle[]> 
 
 export const getParticle = async (id: number): Promise<Particle> => {
   try {
-    const response = await fetch(`/api/particles/${id}`);
+    const response = await fetch(`${dest_api}/particles/${id}`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
     const data = await response.json();
-    return data;
+    
+    const fixedParticle = {
+      ...data,
+      image: data.image
+    };
+    
+    return fixedParticle;
   } catch (error) {
     console.warn('API request failed, using mock data:', error);
     
