@@ -1,5 +1,3 @@
-Посмотреть проект на GitHub Pages: https://liza05444.github.io/De_Broglie_Calculation_RIP_2025_frontend
-
 #### Лабораторная 6
 
 - **Цель работы**: Внедрение адаптивности и развертывание приложения

@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import { type FC, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
 import { HomePage } from './pages/HomePage/HomePage';
@@ -9,6 +9,13 @@ import { dest_root } from './target_config';
 import './App.css';
 
 const App: FC = () => {
+  useEffect(() => {
+    console.log("Tauri app initialized");
+    return () => {
+      console.log("Tauri app cleanup");
+    }
+  }, []);
+
   return (
     <BrowserRouter basename={dest_root}>
       <div className="app">
